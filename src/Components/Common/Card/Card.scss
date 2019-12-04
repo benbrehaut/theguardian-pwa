@@ -1,0 +1,37 @@
+@import '../../../Static/scss/settings/variables';
+@import '../../../Static/scss/settings/unit';
+@import '../../../Static/scss/tools/mixins';
+
+.o-card {
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;
+  background-color: ds-color('brightness-100');
+  box-shadow: $global-box-shadow;
+  height: 100%;
+
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    overflow: hidden;
+    text-indent: 200%;
+    white-space: nowrap;
+  }
+
+  &__inner {
+    padding: rem-calc(20);
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: rem-calc(18);
+  }
+  
+  &__content {
+    font-size: rem-calc(14);
+  }
+}

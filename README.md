@@ -1,3 +1,6 @@
+# theguardian PWA
+A PWA news app using the guardian API to pull in content.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

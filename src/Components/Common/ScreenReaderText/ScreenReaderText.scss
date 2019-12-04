@@ -1,0 +1,7 @@
+@import '../../../Static/scss/settings/variables';
+@import '../../../Static/scss/settings/unit';
+@import '../../../Static/scss/tools/mixins';
+
+.o-sr-only {
+  @include element-invisible;
+}

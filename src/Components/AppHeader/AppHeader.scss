@@ -1,0 +1,24 @@
+@import '../../Static/scss/settings/variables';
+@import '../../Static/scss/settings/unit';
+
+.o-app-header {
+  background-color: ds-color('brand-main');
+  padding: rem-calc(20);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: ds-color('brightness-100');
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+  &__logo {
+    color: inherit;
+  }
+
+  &__menuToggle {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+  }
+}

@@ -1,0 +1,32 @@
+@import '../../Static/scss/settings/variables';
+@import '../../Static/scss/settings/unit';
+@import '../../Static/scss/tools/mixins';
+
+.c-articles-list {
+  &__title {
+    font-weight: bold;
+    font-size: rem-calc(24);
+    margin-bottom: rem-calc(17);
+  }
+
+  &__articles {
+    display: flex;
+    flex-wrap: nowrap; 
+    overflow: auto;
+    
+    // hide scrollbars
+    scrollbar-width: none; // new standard
+    -ms-overflow-style: none; // IE / Edge
+
+    // Webkit
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__article {
+    flex: 0 0 auto;
+    max-width: rem-calc(250);
+    margin: rem-calc(0 10);
+  }
+}

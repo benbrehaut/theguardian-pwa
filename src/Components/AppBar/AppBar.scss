@@ -1,0 +1,11 @@
+@import '../../Static/scss/settings/variables';
+@import '../../Static/scss/settings/unit';
+
+.o-appbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: rem-calc(28);
+  font-weight: bold;
+  padding: rem-calc(5 0);
+}
