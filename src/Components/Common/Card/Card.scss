@@ -3,8 +3,6 @@
 @import '../../../Static/scss/tools/mixins';
 
 .o-card {
-  display: flex;
-  flex-flow: row wrap;
   position: relative;
   background-color: ds-color('brightness-100');
   box-shadow: $global-box-shadow;
@@ -29,6 +27,11 @@
   &__title {
     font-weight: bold;
     font-size: rem-calc(18);
+  }
+
+  &__img {
+    height: 180px;
+    object-fit: cover;
   }
   
   &__content {

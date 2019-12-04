@@ -2,27 +2,24 @@ import React from 'react';
 import {Link } from 'react-router-dom'
 import styles from './Card.scss'
 
-const Card = ({ data, micro }) => {
+const Card = ({ image, title, text, link, imgLoading, micro }) => { 
   if (micro) {
     return(
       <article className="o-card o-card--micro">
-        <Link className="o-card__link" to={ data.id }></Link>
-        <h2 className="o-card__title">{ data.webTitle }</h2>
-        {/* {JSON.stringify(data)} */}
+        <Link className="o-card__link" to={ link }></Link>
+        <h2 className="o-card__title">{ title }</h2>
       </article>
     )
   }
   else {
     return(
       <article className="o-card">
-        <img className="o-card__img" src={ data.fields.thumbnail } alt={ data.fields.trailText } />
+        {image ? <img className="o-card__img" src={ image } alt={ text } loading={imgLoading} /> : null}
         <div className="o-card__inner">
-          <h2 className="o-card__title">{ data.webTitle }</h2>
-          <p className="o-card__content" dangerouslySetInnerHTML={{ __html: data.fields.trailText }} />
-          {/* <span>By { data.fields.byline } </span> */}
-          {/* {JSON.stringify(data)} */}
+          <h2 className="o-card__title">{ title }</h2>
+          <p className="o-card__content" dangerouslySetInnerHTML={{ __html: text }} />
         </div>
-        <Link className="o-card__link" tabIndex="-1" aria-hidden={true} to={ data.id }>{ data.webTitle }</Link>
+        <Link className="o-card__link" tabIndex="-1" aria-hidden={true} to={ link }>{ title }</Link>
       </article>
     )
   }

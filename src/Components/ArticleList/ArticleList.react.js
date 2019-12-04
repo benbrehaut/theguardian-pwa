@@ -13,7 +13,15 @@ const ArticleList = ({ articles, title, loading }) => {
           {articles.results.map((article, id) => {
             return(
               <div className="c-articles-list__article" key={id} >
-                <Card as="article" index={id + 1} data={article} />
+                <Card 
+                  as="article" 
+                  index={id + 1} 
+                  title={article.webTitle} 
+                  link={article.id} 
+                  text={article.fields.trailText} 
+                  image={article.fields.thumbnail} 
+                  imgLoading="lazy"
+                />
               </div>
             )
           })}
