@@ -11,7 +11,7 @@ import './Static/scss/app.scss'
 import AppShell from './Components/AppShell'
 
 import Home from './Routes/Home'
-import Article from './Routes/Article'
+import RedirectSectionArticle from './Routes/RedirectSectionArticle'
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
       <AppShell>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/:id" render={(props) => <Article {...props} />} />
+          <Route path="/:id" render={(props) => <RedirectSectionArticle {...props} />} />
         </Switch>
       </AppShell>
     </Router>
