@@ -29,5 +29,9 @@
     flex: 0 0 auto;
     max-width: rem-calc(250);
     margin: rem-calc(0 10);
+
+    &--loading {
+      width: 250px;
+    }
   }
 }

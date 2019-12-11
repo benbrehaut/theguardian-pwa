@@ -8,6 +8,14 @@
   box-shadow: $global-box-shadow;
   height: 100%;
 
+  @mixin isLoading() {
+    .is-loading & {
+      background-color: ds-color('brightness-60');
+
+      @content;
+    }
+  }
+
   &__link {
     position: absolute;
     top: 0;
@@ -27,14 +35,26 @@
   &__title {
     font-weight: bold;
     font-size: rem-calc(18);
+
+    @include isLoading {
+      padding: rem-calc(10);
+      margin-bottom: rem-calc(20);
+    }
   }
 
   &__img {
     height: 180px;
     object-fit: cover;
+
+    @include isLoading;
   }
   
   &__content {
     font-size: rem-calc(14);
+    margin-bottom: 0;
+
+    @include isLoading {
+      padding: rem-calc(20);
+    }
   }
 }

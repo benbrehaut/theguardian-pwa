@@ -34,7 +34,6 @@ export default class Article extends Component {
 
   render() {
     const { article, isLoading } = this.state;
-    console.log(isLoading)
     return(
       <>
         <AppBar>

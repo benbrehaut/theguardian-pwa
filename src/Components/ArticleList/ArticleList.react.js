@@ -12,14 +12,14 @@ const ArticleList = ({ articles, title, loading }) => {
         <div className="c-articles-list__articles">
           {articles.results.map((article, id) => {
             return(
-              <div className="c-articles-list__article" key={id} >
+              <div className="c-articles-list__article" key={id}>
                 <Card 
-                  as="article" 
-                  index={id + 1} 
-                  title={article.webTitle} 
-                  link={article.id} 
-                  text={article.fields.trailText} 
-                  image={article.fields.thumbnail} 
+                  as="article"
+                  index={id + 1}
+                  title={article.webTitle}
+                  link={article.id}
+                  text={article.fields.trailText}
+                  image={article.fields.thumbnail}
                   imgLoading="lazy"
                 />
               </div>
@@ -27,9 +27,11 @@ const ArticleList = ({ articles, title, loading }) => {
           })}
         </div>
         ) : (
-        <>
-          <p>Loading...</p>
-        </>
+          <div className="c-articles-list__articles">
+            <div className="c-articles-list__article c-articles-list__article--loading">
+              <Card isLoading={true} />
+            </div>
+          </div>
       )}
 
     </div>
