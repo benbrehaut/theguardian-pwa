@@ -116,11 +116,7 @@ $grid-column-count: 12 !default;
 
 // The amount of space between columns at different screen sizes. 
 // Pixels are converted to Rem
-$grid-column-gutter: (
-  sm: 40px,
-  md: 40px,
-  lg: 40px
-) !default;
+$grid-column-gutter: rem-calc(20);
 
 // If `true`, the last column in a row will align to the opposite edge of the row.
 $grid-column-align-edge: true;

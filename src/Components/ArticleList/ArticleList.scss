@@ -1,19 +1,27 @@
-@import '../../Static/scss/settings/variables';
 @import '../../Static/scss/settings/unit';
+@import '../../Static/scss/settings/variables';
 @import '../../Static/scss/tools/mixins';
 
 .c-articles-list {
+  padding-left: $grid-column-gutter;
+  padding-right: $grid-column-gutter;
+
   &__title {
     font-weight: bold;
     font-size: rem-calc(24);
-    margin-bottom: rem-calc(17);
+    margin-bottom: 0;
   }
 
   &__articles {
-    display: flex;
-    flex-wrap: nowrap; 
-    overflow: auto;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-top: rem-calc(30);
     padding-bottom: rem-calc(30); // incase component has shadow
+    margin-left: (-$grid-column-gutter);
+    margin-right: (-$grid-column-gutter);
     
     // hide scrollbars
     scrollbar-width: none; // new standard
@@ -27,11 +35,16 @@
 
   &__article {
     flex: 0 0 auto;
-    max-width: rem-calc(250);
-    margin: rem-calc(0 10);
+    width: rem-calc(300);
+    padding-left: $grid-column-gutter / 2;
+    padding-right: $grid-column-gutter / 2;
 
-    &--loading {
-      width: 250px;
+    &:first-child {
+      padding-left: $grid-column-gutter;
+    }
+
+    &:last-of-type {
+      padding-right: $grid-column-gutter;
     }
   }
 }
