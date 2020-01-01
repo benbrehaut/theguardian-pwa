@@ -28,7 +28,12 @@ export default class Home extends Component {
   }
 
   refreshApp = () => {
-    console.log('Refresh')
+    navigator.serviceWorker.getRegistrations().then(function(registrations) {
+      for(let registration of registrations) {
+       registration.unregister()
+      } 
+    });
+    window.location.reload();
   }
 
   openSearch = () => {
