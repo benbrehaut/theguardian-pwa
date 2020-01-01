@@ -5,11 +5,31 @@
 .c-articles-list {
   padding-left: $grid-column-gutter;
   padding-right: $grid-column-gutter;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
 
   &__title {
     font-weight: bold;
     font-size: rem-calc(24);
-    margin-bottom: 0;
+    margin-bottom: rem-calc(20);
+  }
+
+  &__link {
+    font-size: rem-calc(14);
+    color: ds-color('brightness-46');
+    text-decoration: none;
+    font-weight: normal;
+    margin-left: auto;
+    margin-bottom: rem-calc(10);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__more {
+    margin-top: rem-calc(30);
   }
 
   &__articles {
@@ -18,8 +38,6 @@
     grid-template-rows: auto;
     overflow-x: auto;
     overflow-y: hidden;
-    padding-top: rem-calc(30);
-    padding-bottom: rem-calc(30); // incase component has shadow
     margin-left: (-$grid-column-gutter);
     margin-right: (-$grid-column-gutter);
     

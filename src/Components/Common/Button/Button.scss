@@ -1,0 +1,21 @@
+@import '../../../Static/scss/settings/variables';
+@import '../../../Static/scss/settings/unit';
+@import '../../../Static/scss/tools/mixins';
+
+.o-btn {
+  border-radius: rem-calc(20);
+  display: inline-block;
+  line-height: $line-height-base;
+  font-size: rem-calc(14);
+  padding: rem-calc(5 15);
+  position: relative;
+  transition: all 200ms ease-in-out;
+  text-align: center;
+  font-weight: bold;
+
+  &--primary {
+    background-color: ds-color('highlight-main');
+    border: 1px solid ds-color('highlight-main');
+    color: ds-color('brightness-20');
+  }
+}

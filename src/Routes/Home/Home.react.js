@@ -46,7 +46,7 @@ export default class Home extends Component {
         <AppBar>
           Home
         </AppBar>
-        <ArticleList title="UK News" loading={isLoading} articles={ukNewsArticles} />
+        {isLoading ? "" : <ArticleList title={ukNewsArticles.edition.webTitle} articles={ukNewsArticles.results} viewMorePath={ukNewsArticles.edition.id} />}
       </>
     )
   }

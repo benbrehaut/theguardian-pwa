@@ -4,9 +4,9 @@
 
 .o-card {
   position: relative;
-  background-color: ds-color('brightness-100');
-  box-shadow: $global-box-shadow;
+  background-color: ds-color('brightness-97');
   height: 100%;
+  border-top: 2px solid ds-color('news-main');
 
   @mixin isLoading() {
     .is-loading & {
@@ -29,12 +29,17 @@
   }
 
   &__inner {
-    padding: rem-calc(20);
+    padding: rem-calc(10);
   }
 
   &__title {
     font-weight: bold;
     font-size: rem-calc(18);
+
+    a {
+      color: currentColor;
+      text-decoration: none;
+    }
 
     @include isLoading {
       padding: rem-calc(10);
