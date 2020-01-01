@@ -4,6 +4,10 @@ import api from '../../services/api.js'
 
 import AppBar from './../../Components/AppBar'
 import ArticleList from './../../Components/ArticleList'
+import ActionBadge from './../../Components/Common/ActionBadge'
+
+import { ReactComponent as SearchIcon } from './../../Static/icons/search.svg';
+import { ReactComponent as RefreshIcon } from './../../Static/icons/refresh.svg';
 
 export default class Home extends Component {
   constructor(props) {
@@ -15,10 +19,20 @@ export default class Home extends Component {
     }
 
     this.getNews = this.getNews.bind(this);
+    this.refreshApp = this.refreshApp.bind(this);
+    this.openSearch = this.openSearch.bind(this);
   }
 
   componentDidMount() {
     this.getNews();
+  }
+
+  refreshApp = () => {
+    console.log('Refresh')
+  }
+
+  openSearch = () => {
+    console.log('Open search')
   }
 
   getNews = () => {
@@ -43,9 +57,18 @@ export default class Home extends Component {
 
     return(
       <>
-        <AppBar>
-          Home
-        </AppBar>
+        <AppBar title="Home" 
+          leftIcon={
+            <ActionBadge fill="#000" onClick={this.openSearch} text="Open search menu">
+              <SearchIcon />
+            </ActionBadge>
+          }
+          rightIcon={
+            <ActionBadge fill="#000" onClick={this.refreshApp} text="Refresh app">
+              <RefreshIcon />
+            </ActionBadge>
+          }
+        />
         {isLoading ? "" : <ArticleList title={ukNewsArticles.edition.webTitle} articles={ukNewsArticles.results} viewMorePath={ukNewsArticles.edition.id} />}
       </>
     )

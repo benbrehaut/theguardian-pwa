@@ -1,0 +1,11 @@
+@import '../../../Static/scss/settings/variables';
+@import '../../../Static/scss/settings/unit';
+@import '../../../Static/scss/tools/mixins';
+
+.o-action-badge {
+  background-color: ds-color('brightness-97');
+  border-radius: 50%;
+  border: 0;
+  display: flex;
+  padding: rem-calc(8);
+}
