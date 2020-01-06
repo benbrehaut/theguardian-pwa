@@ -1,3 +1,1 @@
-import Section from './Section.react'
-
-export default Section;
+export {Section} from './Section.react'
