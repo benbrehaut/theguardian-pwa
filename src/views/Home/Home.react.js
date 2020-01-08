@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 
 import api from '../../services/api.js'
 
-import AppBar from './../../Components/AppBar'
-import ArticleList from './../../Components/ArticleList'
-import ActionBadge from './../../Components/Common/ActionBadge'
+import AppBar from '../../Components/AppBar'
+import ArticleList from '../../Components/ArticleList'
+import ActionBadge from '../../Components/Common/ActionBadge'
 
 import { ReactComponent as SearchIcon } from './../../Static/icons/search.svg';
 import { ReactComponent as RefreshIcon } from './../../Static/icons/refresh.svg';

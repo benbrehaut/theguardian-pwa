@@ -11,8 +11,8 @@ import './Static/scss/app.scss'
 
 import AppShell from './Components/AppShell'
 
-import Home from './Routes/Home'
-import RedirectSectionArticle from './Routes/RedirectSectionArticle'
+import Home from './views/Home'
+import RedirectSectionArticle from './views/RedirectSectionArticle'
 
 function App() {
   return (
