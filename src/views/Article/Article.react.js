@@ -4,6 +4,7 @@ import AppBar from './../../Components/AppBar'
 import ActionBadge from '../../Components/Common/ActionBadge'
 import { ReactComponent as BackArrowIcon } from './../../Static/icons/chevron-left.svg';
 import { ReactComponent as ShareIcon } from './../../Static/icons/share.svg';
+import './Article.scss'
 
 export default class Article extends Component {
   constructor(props) {
@@ -87,12 +88,17 @@ export default class Article extends Component {
         />
         {!isLoading ? (
           <article className="c-article" role="article">
-            <img src={article.fields.thumbnail} alt={ article.fields.byline } />
-            <h1>{ article.webTitle }</h1>
-            <p dangerouslySetInnerHTML={{ __html: article.fields.standfirst }} />
-            <time>{ article.fields.firstPublicationDate }</time>
-            { article.fields.byline }
-            <div dangerouslySetInnerHTML={{ __html: article.fields.body }} />
+            <div className="c-article__meta">
+              <div className="c-article__image">
+                <img src={article.fields.thumbnail} alt={ article.fields.byline } />
+              </div>
+              <h1 className="c-article__title">{ article.webTitle }</h1>
+              <div className="c-article__strand" dangerouslySetInnerHTML={{ __html: article.fields.standfirst }} 
+              />
+              <span className="c-article__authors">{ article.fields.byline }</span>
+              <time className="c-article__pubDate">{ article.fields.firstPublicationDate }</time>
+            </div>
+            <div className="c-article__content" dangerouslySetInnerHTML={{ __html: article.fields.body }} />
           </article>
         ) : (
           <div>
