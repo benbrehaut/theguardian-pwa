@@ -1,7 +1,7 @@
 # theguardian PWA
 A PWA news app using the guardian API to pull in content, built using React and React Router.
 
-This is a very early proof of concept and contains many broken / WIP code. 
+This is a very early proof of concept and might contain broken / WIP code. 
 
 To get content from the guardian API, you will need an [API key](https://bonobo.capi.gutools.co.uk/register/developer)
 
